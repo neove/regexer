@@ -233,8 +233,8 @@ export default class Reference {
 	tipForMatch(match, text) {
 		if (!match) { return null; }
 		let more = match.l > 150;
-		let str = "<b>match: </b>" + Utils.shorten(text.substr(match.i, match.l), 150, true, "i") +
-				  "<br/><b>range: </b><code>" + match.i + "-" + (match.i+match.l-1)+ "</code>";
+		let str = "<b>匹配结果: </b>" + Utils.shorten(text.substr(match.i, match.l), 150, true, "i") +
+				  "<br/><b>范围: </b><code>" + match.i + "-" + (match.i+match.l-1)+ "</code>";
 		
 		let groups = match.groups, l = groups && groups.length;
 		for (let i = 0; i < l; i++) {

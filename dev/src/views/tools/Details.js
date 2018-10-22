@@ -45,7 +45,7 @@ export default class Details {
 // private methods:
 	_update() {
 		$.empty(this.el);
-		$.create("div", "desc", "Click a <span class='match'>match</span> above to display match &amp; group details. Mouse over a <code>Group</code> row to highlight it in the Expression.", this.el);
+		$.create("div", "desc", "点击匹配文本，可查看匹配和分组详情。鼠标在分组悬浮时可在表达式中高亮", this.el);
 		this._addMatch(app.text.selectedMatch, app.text.value);
 	}
 	

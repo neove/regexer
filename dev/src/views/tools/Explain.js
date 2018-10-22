@@ -29,7 +29,6 @@ export default class Explain {
 		this.el = el;
 		$.addClass(el, "explain");
 		this._update();
-		
 		this._bound_handleEvent = (evt) => this._handleEvent(evt);
 		app.expression.addEventListener("change", this._bound_handleEvent);
 		app.expression.highlighter.addEventListener("hover", this._bound_handleEvent);
@@ -51,7 +50,7 @@ export default class Explain {
 			el.innerHTML = "<span class='desc'>Enter an Expression above and it will be explained here.</span>";
 			return;
 		}
-		el.innerHTML = "<span class='desc'>Roll-over elements below to highlight in the Expression above. Click to open in Reference.</span>";
+		el.innerHTML = "<span class='desc'>鼠标悬浮时可高亮对应的表达式，单击查看参考解释</span>";
 		while ((token = token.next) && (token.type !== "close")) {
 			
 			if (token.proxy || (token.open && token.open.proxy)) { continue; }

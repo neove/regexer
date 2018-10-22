@@ -108,10 +108,10 @@ export default class Text extends EventDispatcher {
 			$.addClass(el, "error");
 			if (result.error.warning) { $.addClass(el, "warning"); }
 		} else if (l) {
-			el.innerHTML = l + " match" + (l>1?"es":"") + (this._emptyCount?"*":"");
+			el.innerHTML = l + '个匹配结果';
 			$.addClass(el, "matches");
 		} else {
-			el.innerText = "No match";
+			el.innerText = "没有匹配结果";
 		}
 		if (result.time != null) {  el.innerHTML += "<em> ("+parseFloat(result.time).toFixed(1)+"ms)</em>"; }
 		this._updateSelected();
